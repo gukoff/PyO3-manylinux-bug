@@ -21,8 +21,3 @@ done
 for whl in /io/dist/*.whl; do
     auditwheel repair "$whl" -w /io/dist/
 done
-
-# Install packages and test
-for PYBIN in /opt/python/cp{27,35,36}*/bin/; do
-    "${PYBIN}/pip" install hello-rust --no-index -f /io/dist/
-done
